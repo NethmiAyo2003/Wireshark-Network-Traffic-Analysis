@@ -1,0 +1,13 @@
+# Useful Wireshark Display Filters for SOC Monitoring
+
+1. Filter for ICMP (Ping) Traffic Only:
+icmp
+
+2. Filter for TCP SYN Packets (Detects Stealth Port Scanning):
+tcp.flags.syn == 1 && tcp.flags.ack == 0
+
+3. Filter for specific Host IP address:
+ip.addr == 8.8.8.8
+
+4. Filter for HTTP GET Requests (Unencrypted Web Traffic):
+http.request.method == "GET"
