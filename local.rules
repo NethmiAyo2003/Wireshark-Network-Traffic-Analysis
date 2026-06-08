@@ -1,0 +1,2 @@
+# Custom Snort 3 Rule for ICMP Flooding / Ping Detection
+alert icmp any any -> any any (msg:"[!] ATTACK DETECTED: ICMP Ping Detected"; sid:1000001; rev:1;)
